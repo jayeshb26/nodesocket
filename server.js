@@ -1,8 +1,8 @@
 
 const
 {Server} = require("socket.io"),
-
-server = new Server(800);
+console.info("hello");
+server = new Server(8800);
 var gaze = server.of('/gaze').on('connection', function (socket) {
     socket.on('gaze', function (gdata) {
         gaze.emit('gaze', gdata.toString());
